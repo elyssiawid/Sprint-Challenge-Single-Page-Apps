@@ -7,9 +7,9 @@ export default function LocationCard(props) {
   return (
     <Card>
       <CardBody>
-        <span>{props.location.name}</span>
-        <span>{props.location.type}</span>
-        <span>{props.location.dimension}</span>
+        <h3>{props.location.name}</h3>
+        <p>Type: {props.location.type}</p>
+        <p>Dimension: {props.location.dimension}</p>
       </CardBody>
     </Card>
   );
@@ -18,13 +18,12 @@ export default function LocationCard(props) {
 const Card = styled.div`
   border-radius: 3px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-grow: 1;
   border: 2px solid gray;
-  color: darkblue;
+  color: gray;
   margin-bottom: 20px;
   padding: 20px;
-  text-align: center;
   :hover {
     color: red;
   }

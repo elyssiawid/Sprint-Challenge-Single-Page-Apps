@@ -11,8 +11,8 @@ export default function CharacterCard({ character }) {
         <img src={character.image} />
         <h3>{character.name}</h3>
         <p>{character.status}</p>
-        <p>{character.location.name}</p>
-        <p>{character.origin.name}</p>
+        <p>Location:{character.location.name}</p>
+        <p>Origin:{character.origin.name}</p>
       </CardBody>
     </Card>
   );
