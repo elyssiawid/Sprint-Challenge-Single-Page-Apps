@@ -18,7 +18,16 @@ const EpisodesList = props => {
     getEpisodes();
   }, []);
 
-  return <section className="episode-list grid-view" />;
+  return (
+    <section className="episode-list grid-view">
+      {episodes.map(episode => (
+        <div>
+          <EpisodeCard key={episode.id} episode={episode} />
+          <Link to={`/episodes/:id ${epsiodes.id}`} />
+        </div>
+      ))}
+    </section>
+  );
 };
 
 export default EpisodesList;
