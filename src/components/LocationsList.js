@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import LocationCard from "./LocationCard";
+import { Link } from "react-router-dom";
 
 const LocationsList = props => {
   const [locations, setLocations] = useState([]);
@@ -9,7 +11,7 @@ const LocationsList = props => {
         .get("https://rickandmortyapi.com/api/location/")
         .then(response => {
           console.log("locations", response);
-          setLocations(response.data);
+          setLocations(response.data.results);
         })
         .catch(error => {
           console.error("Server Error", error);
@@ -19,8 +21,13 @@ const LocationsList = props => {
   }, []);
 
   return (
-    <section className="locations-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+    <section className="location-list grid-view">
+      {locations.map(location => (
+        <div>
+          <LocationCard key={location.id} location={location} />
+          <Link to={`/locations/:id ${locations.id}`} />
+        </div>
+      ))}
     </section>
   );
 };
