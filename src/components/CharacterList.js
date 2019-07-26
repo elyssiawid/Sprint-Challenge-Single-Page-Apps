@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 const CharacterList = props => {
@@ -7,8 +6,9 @@ const CharacterList = props => {
   useEffect(() => {
     const getCharacters = () => {
       axios
-        .get("https://rickandmortyapi.com/api/character/ - docs")
+        .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
+          console.log("hello", response);
           setCharacters(response.data);
         })
         .catch(error => {
@@ -17,6 +17,7 @@ const CharacterList = props => {
     };
     getCharacters();
   }, []);
+
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
