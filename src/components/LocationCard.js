@@ -25,6 +25,6 @@ const Card = styled.div`
   margin-bottom: 20px;
   padding: 20px;
   :hover {
-    color: red;
+    color: dodgerblue;
   }
 `;

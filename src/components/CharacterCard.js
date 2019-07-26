@@ -11,8 +11,8 @@ export default function CharacterCard({ character }) {
         <img src={character.image} />
         <h3>{character.name}</h3>
         <p>{character.status}</p>
-        <p>Location:{character.location.name}</p>
-        <p>Origin:{character.origin.name}</p>
+        <p>Location: {character.location.name}</p>
+        <p>Origin: {character.origin.name}</p>
       </CardBody>
     </Card>
   );
@@ -25,6 +25,6 @@ const Card = styled.div`
   margin-bottom: 20px;
   padding: 20px;
   :hover {
-    color: red;
+    color: dodgerblue;
   }
 `;

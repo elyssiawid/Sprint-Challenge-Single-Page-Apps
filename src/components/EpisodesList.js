@@ -18,11 +18,7 @@ const EpisodesList = props => {
     getEpisodes();
   }, []);
 
-  return (
-    <section className="episode-list grid-view">
-      <h2>`array.map()` over your state here!</h2>
-    </section>
-  );
+  return <section className="episode-list grid-view" />;
 };
 
 export default EpisodesList;
