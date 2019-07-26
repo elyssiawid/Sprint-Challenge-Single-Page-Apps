@@ -8,10 +8,11 @@ export default function CharacterCard({ character }) {
   return (
     <Card>
       <CardBody>
+        <img>{character.image}</img>
         <h3>{character.name}</h3>
         <p>{character.status}</p>
-        <p>{character.location}</p>
-        <p>{character.origin}</p>
+        {/* <p>{character.location}</p> */}
+        {/* <p>{character.origin}</p> */}
       </CardBody>
     </Card>
   );

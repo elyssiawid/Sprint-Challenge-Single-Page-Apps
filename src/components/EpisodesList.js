@@ -20,7 +20,7 @@ const EpisodesList = props => {
 
   return (
     <section className="episode-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>`array.map()` over your state here!</h2>
     </section>
   );
 };
